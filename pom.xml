@@ -155,8 +155,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-simple</artifactId>
-		<version>1.7.25</version>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.25</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -184,6 +184,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
 			<version>1.51n</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
 		</dependency>
 	</dependencies>
 	<reporting>
@@ -214,35 +219,36 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.3</version>
 				<configuration>
-					<findbugsXmlOutput>true</findbugsXmlOutput>
-					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-					<xmlOutput>true</xmlOutput>
+				<findbugsXmlOutput>true</findbugsXmlOutput>
+				<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+				<xmlOutput>true</xmlOutput>
 				</configuration>
-			</plugin>
-			<plugin>
+				</plugin>
+				<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.6</version>
-			</plugin>
-			<plugin>
+				</plugin>
+				<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.6.201602180812</version>
 				<configuration>
-					<!-- Sets the path to the file which contains the execution data. -->
-					<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+				<!-- Sets the path to the file which contains the execution data. -->
+				<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
 				</configuration>
-			</plugin>
-			<plugin>
+				</plugin>
+				<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.10.4</version>
 				<configuration>
-					<show>private</show>
-					<quiet>false</quiet>
-					<additionalparam>-Xdoclint:none</additionalparam>
+				<show>private</show>
+				<quiet>false</quiet>
+				<additionalparam>-Xdoclint:none</additionalparam>
 				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
-</project>
+				</plugin>
+				</plugins>
+				</reporting>
+				</project>
+								
