@@ -1,0 +1,4 @@
+# ImageJTestSuite
+
+## Documentation
+Maven generated site is available under [GitHub pages](https://baniuk.github.io/ImageJTestSuite)
