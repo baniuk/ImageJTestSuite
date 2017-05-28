@@ -43,7 +43,7 @@
                                                                                                                                                                                                                                                         <li class="collapsed">
                           <a href="project-info.html" title="Project Information">Project Information</a>
                   </li>
-                                                                                                                                                                        <li class="expanded">
+                                                                                                                                                                                                            <li class="expanded">
                           <a href="project-reports.html" title="Project Reports">Project Reports</a>
                     <ul>
                       <li class="none">
@@ -58,6 +58,12 @@
                       <li class="none">
             <strong>FindBugs</strong>
           </li>
+                      <li class="none">
+                          <a href="jacoco/index.html" title="JaCoCo Test">JaCoCo Test</a>
+            </li>
+                      <li class="none">
+                          <a href="jacoco-it/index.html" title="JaCoCo IT">JaCoCo IT</a>
+            </li>
                       <li class="none">
                           <a href="apidocs/index.html" title="JavaDocs">JavaDocs</a>
             </li>
@@ -90,8 +96,8 @@
 <th>Errors</th>
 <th>Missing Classes</th></tr>
 <tr class="b">
-<td>6</td>
-<td>1</td>
+<td>17</td>
+<td>2</td>
 <td>0</td>
 <td>0</td></tr></table></div>
 <div class="section">
@@ -102,22 +108,40 @@
 <th>Bugs</th></tr>
 <tr class="b">
 <td><a href="#com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader">com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader</a></td>
+<td>1</td></tr>
+<tr class="a">
+<td><a href="#com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher">com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher</a></td>
 <td>1</td></tr></table></div><a name="com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader"></a>
 <div class="section">
 <h3><a name="com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader"></a>com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader</h3>
 <table border="0" class="bodyTable">
-<tr class="a">
+<tr class="b">
 <th>Bug</th>
 <th>Category</th>
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="b">
+<tr class="a">
 <td>Found reliance on default encoding in new com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader(String): new java.util.Scanner(File)</td>
 <td>I18N</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING</a></td>
 <td><a href="./xref/com/github/baniuk/ImageJTestSuite/dataaccess/DataLoader.html#L67">67</a></td>
-<td>High</td></tr></table></div>
+<td>High</td></tr></table></div><a name="com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher"></a>
+<div class="section">
+<h3><a name="com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher"></a>com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher</h3>
+<table border="0" class="bodyTable">
+<tr class="b">
+<th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+<th>Priority</th></tr>
+<tr class="a">
+<td>com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher.matchesSafely(File, Description) discards result of readLine after checking if it is non-null</td>
+<td>STYLE</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#RV_DONT_JUST_NULL_CHECK_READLINE">RV_DONT_JUST_NULL_CHECK_READLINE</a></td>
+<td><a href="./xref/com/github/baniuk/ImageJTestSuite/matchers/file/FileMatcher.html#L67">67</a></td>
+<td>Medium</td></tr></table></div>
       </div>
     </div>
     <div class="clear">

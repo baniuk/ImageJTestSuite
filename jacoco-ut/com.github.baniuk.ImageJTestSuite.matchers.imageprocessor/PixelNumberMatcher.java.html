@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PixelNumberMatcher.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ImageJTestSuite</a> &gt; <a href="index.source.html" class="el_package">com.github.baniuk.ImageJTestSuite.matchers.imageprocessor</a> &gt; <span class="el_source">PixelNumberMatcher.java</span></div><h1>PixelNumberMatcher.java</h1><pre class="source lang-java linenums">package com.github.baniuk.ImageJTestSuite.matchers.imageprocessor;
+
+import org.hamcrest.Description;
+import org.hamcrest.TypeSafeDiagnosingMatcher;
+
+import com.github.baniuk.ImageJTestSuite.ConvertImageProcessors;
+
+import ij.process.ImageProcessor;
+
+/**
+ * Compares pixels in ImageProcessors, trigger if given number of them is different.
+ * 
+ * @author p.baniukiewicz
+ *
+ */
+public class PixelNumberMatcher extends TypeSafeDiagnosingMatcher&lt;ImageProcessor&gt; {
+
+  private final ImageProcessor expected;
+  private final int numOfDifferent;
+
+  /**
+   * Main constructor.
+   * 
+   * @param expected expected file.
+   * @param numOfDifferent number of pixels that must differ to trigger
+   */
+<span class="nc" id="L27">  public PixelNumberMatcher(ImageProcessor expected, int numOfDifferent) {</span>
+<span class="nc" id="L28">    this.expected = expected;</span>
+<span class="nc" id="L29">    this.numOfDifferent = numOfDifferent;</span>
+<span class="nc" id="L30">  }</span>
+
+  @Override
+  public void describeTo(Description description) {
+<span class="nc" id="L34">    description.appendText(&quot;Number of different pixels is less than.&quot;);</span>
+
+<span class="nc" id="L36">  }</span>
+
+  @Override
+  protected boolean matchesSafely(ImageProcessor compared, Description mismatchDescription) {
+<span class="nc" id="L40">    Double[] refCompared =</span>
+<span class="nc" id="L41">            ConvertImageProcessors.number2double(ConvertImageProcessors.castToNumber(compared));</span>
+<span class="nc" id="L42">    Double[] refExpected =</span>
+<span class="nc" id="L43">            ConvertImageProcessors.number2double(ConvertImageProcessors.castToNumber(expected));</span>
+
+<span class="nc" id="L45">    int different = 0;</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">    if (refCompared.length != refExpected.length) {</span>
+<span class="nc" id="L47">      mismatchDescription.appendText(&quot;was: &quot;).appendText(&quot;Differenr number of pixels&quot;);</span>
+<span class="nc" id="L48">      return false;</span>
+    }
+<span class="nc bnc" id="L50" title="All 2 branches missed.">    for (int i = 0; i &lt; refCompared.length; i++) {</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">      if (refCompared[i].compareTo(refExpected[i]) != 0) {</span>
+<span class="nc" id="L52">        different++;</span>
+      }
+<span class="nc bnc" id="L54" title="All 2 branches missed.">      if (different &gt; numOfDifferent) {</span>
+<span class="nc" id="L55">        mismatchDescription.appendText(&quot;was: &quot;)</span>
+<span class="nc" id="L56">                .appendText(&quot;Differenr number of pixels exceeded level of &quot; + numOfDifferent);</span>
+<span class="nc" id="L57">        return false;</span>
+      }
+    }
+
+<span class="nc" id="L61">    return true;</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

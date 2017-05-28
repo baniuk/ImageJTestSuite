@@ -1,3 +1,7 @@
 com.github.baniuk.ImageJTestSuite
 com.github.baniuk.ImageJTestSuite.dataaccess
 com.github.baniuk.ImageJTestSuite.datatoimage
+com.github.baniuk.ImageJTestSuite.matchers
+com.github.baniuk.ImageJTestSuite.matchers.arrays
+com.github.baniuk.ImageJTestSuite.matchers.file
+com.github.baniuk.ImageJTestSuite.matchers.imageprocessor

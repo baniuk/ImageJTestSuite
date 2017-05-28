@@ -25,9 +25,9 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 6,
+      <title>File: 17,
              Errors: 0,
-             Warnings: 12,
+             Warnings: 23,
              Infos: 0
       </title>
             <link>https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html</link>
@@ -46,21 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.ConvertLists.java">com/github/baniuk/ImageJTestSuite/ConvertLists.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  7
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.dataaccess.package-info.java">com/github/baniuk/ImageJTestSuite/dataaccess/package-info.java</a>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.imageprocessor.package-info.java">com/github/baniuk/ImageJTestSuite/matchers/imageprocessor/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -75,6 +61,62 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.datatoimage.package-info.java">com/github/baniuk/ImageJTestSuite/datatoimage/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.imageprocessor.ImageProcessorMatchers.java">com/github/baniuk/ImageJTestSuite/matchers/imageprocessor/ImageProcessorMatchers.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.arrays.ArrayMatchers.java">com/github/baniuk/ImageJTestSuite/matchers/arrays/ArrayMatchers.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.file.FileMatchers.java">com/github/baniuk/ImageJTestSuite/matchers/file/FileMatchers.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.package-info.java">com/github/baniuk/ImageJTestSuite/matchers/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -116,7 +158,119 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.file.package-info.java">com/github/baniuk/ImageJTestSuite/matchers/file/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.ConvertLists.java">com/github/baniuk/ImageJTestSuite/ConvertLists.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.dataaccess.package-info.java">com/github/baniuk/ImageJTestSuite/dataaccess/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.imageprocessor.PixelMatcher.java">com/github/baniuk/ImageJTestSuite/matchers/imageprocessor/PixelMatcher.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.ConvertImageProcessors.java">com/github/baniuk/ImageJTestSuite/ConvertImageProcessors.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.imageprocessor.PixelNumberMatcher.java">com/github/baniuk/ImageJTestSuite/matchers/imageprocessor/PixelNumberMatcher.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.dataaccess.DataLoader.java">com/github/baniuk/ImageJTestSuite/dataaccess/DataLoader.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.file.FileMatcher.java">com/github/baniuk/ImageJTestSuite/matchers/file/FileMatcher.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.arrays.package-info.java">com/github/baniuk/ImageJTestSuite/matchers/arrays/package-info.java</a>
                 </td>
                 <td>
                   0
