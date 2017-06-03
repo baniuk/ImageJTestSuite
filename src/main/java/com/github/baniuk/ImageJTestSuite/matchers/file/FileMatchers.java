@@ -1,3 +1,4 @@
+
 package com.github.baniuk.ImageJTestSuite.matchers.file;
 
 import java.io.File;
@@ -6,8 +7,8 @@ import java.io.File;
  * Factory class for Hamcrest file matchers.
  * 
  * @author p.baniukiewicz
- *
  */
+
 public class FileMatchers {
 
   /**
@@ -22,6 +23,7 @@ public class FileMatchers {
    * @param expected expected file
    * @return instance
    */
+
   public static FileMatcher containsExactText(File expected) {
     return new FileMatcher(expected);
   }

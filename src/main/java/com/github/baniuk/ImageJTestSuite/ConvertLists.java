@@ -16,8 +16,10 @@ import ij.process.FloatPolygon;
 public class ConvertLists {
 
   /**
+   * Convert list of Point2d to FloatPolygon that can be used as 2D array holder.
+   * 
    * @param list
-   * @return
+   * @return FloatPolygon with x, y
    */
   public static FloatPolygon fromList2Polygon(final List<Point2d> list) {
 
@@ -35,8 +37,10 @@ public class ConvertLists {
   }
 
   /**
+   * Convert from FloatPolygon to list of Point2d.
+   * 
    * @param polygon
-   * @return
+   * @return List of points in unchanged order
    */
   public static List<Point2d> fromPolygon2List(final FloatPolygon polygon) {
     List<Point2d> ret = new ArrayList<Point2d>(polygon.npoints);
