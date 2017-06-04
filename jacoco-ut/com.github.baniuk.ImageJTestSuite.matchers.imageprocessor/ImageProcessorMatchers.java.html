@@ -24,7 +24,7 @@ import ij.process.ImageProcessor;
    * @return instance
    */
   public static PixelMatcher hasSamePixels(ImageProcessor expected) {
-<span class="nc" id="L27">    return new PixelMatcher(expected);</span>
+<span class="fc" id="L27">    return new PixelMatcher(expected);</span>
   }
 
   /**
@@ -46,7 +46,7 @@ import ij.process.ImageProcessor;
    */
   public static PixelNumberMatcher hasLessDifferentPixelsThan(ImageProcessor expected,
           int maxDifferent) {
-<span class="nc" id="L49">    return new PixelNumberMatcher(expected, maxDifferent);</span>
+<span class="fc" id="L49">    return new PixelNumberMatcher(expected, maxDifferent);</span>
   }
 
 }

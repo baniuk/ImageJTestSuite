@@ -16,34 +16,38 @@ import ij.process.FloatPolygon;
 <span class="nc" id="L16">public class ConvertLists {</span>
 
   /**
+   * Convert list of Point2d to FloatPolygon that can be used as 2D array holder.
+   * 
    * @param list
-   * @return
+   * @return FloatPolygon with x, y
    */
   public static FloatPolygon fromList2Polygon(final List&lt;Point2d&gt; list) {
 
-<span class="fc" id="L24">    float[] x = new float[list.size()];</span>
-<span class="fc" id="L25">    float[] y = new float[list.size()];</span>
+<span class="fc" id="L26">    float[] x = new float[list.size()];</span>
+<span class="fc" id="L27">    float[] y = new float[list.size()];</span>
 
-<span class="fc" id="L27">    int l = 0;</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">    for (Point2d p : list) {</span>
-<span class="fc" id="L29">      x[l] = (float) p.x;</span>
-<span class="fc" id="L30">      y[l] = (float) p.y;</span>
-<span class="fc" id="L31">      l++;</span>
-<span class="fc" id="L32">    }</span>
+<span class="fc" id="L29">    int l = 0;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">    for (Point2d p : list) {</span>
+<span class="fc" id="L31">      x[l] = (float) p.x;</span>
+<span class="fc" id="L32">      y[l] = (float) p.y;</span>
+<span class="fc" id="L33">      l++;</span>
+<span class="fc" id="L34">    }</span>
 
-<span class="fc" id="L34">    return new FloatPolygon(x, y);</span>
+<span class="fc" id="L36">    return new FloatPolygon(x, y);</span>
   }
 
   /**
+   * Convert from FloatPolygon to list of Point2d.
+   * 
    * @param polygon
-   * @return
+   * @return List of points in unchanged order
    */
   public static List&lt;Point2d&gt; fromPolygon2List(final FloatPolygon polygon) {
-<span class="fc" id="L42">    List&lt;Point2d&gt; ret = new ArrayList&lt;Point2d&gt;(polygon.npoints);</span>
-<span class="fc bfc" id="L43" title="All 2 branches covered.">    for (int p = 0; p &lt; polygon.npoints; p++) {</span>
-<span class="fc" id="L44">      ret.add(new Point2d(polygon.xpoints[p], polygon.ypoints[p]));</span>
+<span class="fc" id="L46">    List&lt;Point2d&gt; ret = new ArrayList&lt;Point2d&gt;(polygon.npoints);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">    for (int p = 0; p &lt; polygon.npoints; p++) {</span>
+<span class="fc" id="L48">      ret.add(new Point2d(polygon.xpoints[p], polygon.ypoints[p]));</span>
     }
-<span class="fc" id="L46">    return ret;</span>
+<span class="fc" id="L50">    return ret;</span>
   }
 
 }

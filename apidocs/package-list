@@ -5,3 +5,4 @@ com.github.baniuk.ImageJTestSuite.matchers
 com.github.baniuk.ImageJTestSuite.matchers.arrays
 com.github.baniuk.ImageJTestSuite.matchers.file
 com.github.baniuk.ImageJTestSuite.matchers.imageprocessor
+com.github.baniuk.ImageJTestSuite.matchers.json

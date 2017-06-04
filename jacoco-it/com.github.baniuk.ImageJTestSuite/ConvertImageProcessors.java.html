@@ -21,17 +21,17 @@ import ij.process.ImageProcessor;
    * @return array of objects converted from primitives
    */
   public static Number[] castToNumber(ImageProcessor input) {
-<span class="nc" id="L24">    Object pixels = input.getPixels();</span>
-<span class="nc bnc" id="L25" title="All 2 branches missed.">    if (pixels == null) {</span>
+<span class="fc" id="L24">    Object pixels = input.getPixels();</span>
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">    if (pixels == null) {</span>
 <span class="nc" id="L26">      return null;</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">    } else if (pixels instanceof byte[]) {</span>
-<span class="nc" id="L28">      return ArrayUtils.toObject((byte[]) pixels);</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">    } else if (pixels instanceof short[]) {</span>
-<span class="nc" id="L30">      return ArrayUtils.toObject((short[]) pixels);</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">    } else if (pixels instanceof int[]) {</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">    } else if (pixels instanceof byte[]) {</span>
+<span class="fc" id="L28">      return ArrayUtils.toObject((byte[]) pixels);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">    } else if (pixels instanceof short[]) {</span>
+<span class="fc" id="L30">      return ArrayUtils.toObject((short[]) pixels);</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">    } else if (pixels instanceof int[]) {</span>
 <span class="nc" id="L32">      return ArrayUtils.toObject((int[]) pixels);</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">    } else if (pixels instanceof float[]) {</span>
-<span class="nc" id="L34">      return ArrayUtils.toObject((float[]) pixels);</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">    } else if (pixels instanceof float[]) {</span>
+<span class="fc" id="L34">      return ArrayUtils.toObject((float[]) pixels);</span>
     } else {
 <span class="nc" id="L36">      throw new IllegalArgumentException(&quot;Unknown bit depth&quot;);</span>
     }
@@ -44,9 +44,9 @@ import ij.process.ImageProcessor;
    * @return Input array converted to Double
    */
   public static Double[] number2double(Number[] input) {
-<span class="nc" id="L47">    final Double[] result = new Double[input.length];</span>
-<span class="nc" id="L48">    IntStream.range(0, input.length).forEach(index -&gt; result[index] = input[index].doubleValue());</span>
-<span class="nc" id="L49">    return result;</span>
+<span class="fc" id="L47">    final Double[] result = new Double[input.length];</span>
+<span class="fc" id="L48">    IntStream.range(0, input.length).forEach(index -&gt; result[index] = input[index].doubleValue());</span>
+<span class="fc" id="L49">    return result;</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

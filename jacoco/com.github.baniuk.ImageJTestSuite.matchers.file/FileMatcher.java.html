@@ -31,9 +31,9 @@ public class FileMatcher extends TypeSafeDiagnosingMatcher&lt;File&gt; {
    * 
    * @param expected expected file.
    */
-<span class="nc" id="L34">  public FileMatcher(File expected) {</span>
-<span class="nc" id="L35">    this.expected = expected;</span>
-<span class="nc" id="L36">  }</span>
+<span class="fc" id="L34">  public FileMatcher(File expected) {</span>
+<span class="fc" id="L35">    this.expected = expected;</span>
+<span class="fc" id="L36">  }</span>
 
   @Override
   public void describeTo(Description arg0) {
@@ -44,58 +44,58 @@ public class FileMatcher extends TypeSafeDiagnosingMatcher&lt;File&gt; {
   @Override
   protected boolean matchesSafely(File compared, Description arg1) {
     String line;
-<span class="nc" id="L47">    int lineNo = 0;</span>
-<span class="nc" id="L48">    BufferedReader expectedReader = null;</span>
-<span class="nc" id="L49">    BufferedReader comparedReader = null;</span>
-<span class="nc" id="L50">    boolean status = true;</span>
+<span class="fc" id="L47">    int lineNo = 0;</span>
+<span class="fc" id="L48">    BufferedReader expectedReader = null;</span>
+<span class="fc" id="L49">    BufferedReader comparedReader = null;</span>
+<span class="fc" id="L50">    boolean status = true;</span>
     try {
-<span class="nc" id="L52">      expectedReader = getReader(compared);</span>
-<span class="nc" id="L53">      comparedReader = getReader(expected);</span>
+<span class="fc" id="L52">      expectedReader = getReader(compared);</span>
+<span class="fc" id="L53">      comparedReader = getReader(expected);</span>
       // go through expected lines
-<span class="nc bnc" id="L55" title="All 2 branches missed.">      while ((line = expectedReader.readLine()) != null) {</span>
-<span class="nc" id="L56">        lineNo++;</span>
-<span class="nc" id="L57">        Matcher&lt;?&gt; equalsMatcher = CoreMatchers.equalTo(line);</span>
-<span class="nc" id="L58">        String actualLine = comparedReader.readLine();</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">        if (!equalsMatcher.matches(actualLine)) {</span>
-<span class="nc" id="L60">          arg1.appendText(&quot;was: &quot;).appendDescriptionOf(equalsMatcher).appendText(&quot; at line &quot;)</span>
-<span class="nc" id="L61">                  .appendValue(lineNo).appendText(&quot; of &quot; + compared.getName());</span>
-<span class="nc" id="L62">          status = false;</span>
-<span class="nc" id="L63">          break;</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">      while ((line = expectedReader.readLine()) != null) {</span>
+<span class="fc" id="L56">        lineNo++;</span>
+<span class="fc" id="L57">        Matcher&lt;?&gt; equalsMatcher = CoreMatchers.equalTo(line);</span>
+<span class="fc" id="L58">        String actualLine = comparedReader.readLine();</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (!equalsMatcher.matches(actualLine)) {</span>
+<span class="fc" id="L60">          arg1.appendText(&quot;was: &quot;).appendDescriptionOf(equalsMatcher).appendText(&quot; at line &quot;)</span>
+<span class="fc" id="L61">                  .appendValue(lineNo).appendText(&quot; of &quot; + compared.getName());</span>
+<span class="fc" id="L62">          status = false;</span>
+<span class="fc" id="L63">          break;</span>
         }
-<span class="nc" id="L65">      }</span>
+<span class="fc" id="L65">      }</span>
       // check if compared has any line left if not broke previous loop
-<span class="nc bnc" id="L67" title="All 4 branches missed.">      if (status &amp;&amp; comparedReader.readLine() != null) {</span>
-<span class="nc" id="L68">        arg1.appendText(&quot;was: &quot;).appendText(&quot; longer than &quot; + expected.getName());</span>
-<span class="nc" id="L69">        status = false;</span>
+<span class="fc bfc" id="L67" title="All 4 branches covered.">      if (status &amp;&amp; comparedReader.readLine() != null) {</span>
+<span class="fc" id="L68">        arg1.appendText(&quot;was: &quot;).appendText(&quot; longer than &quot; + expected.getName());</span>
+<span class="fc" id="L69">        status = false;</span>
       }
-<span class="nc" id="L71">    } catch (IOException e) {</span>
-<span class="nc" id="L72">      throw new IllegalArgumentException(e);</span>
-<span class="nc" id="L73">    }</span>
+<span class="fc" id="L71">    } catch (IOException e) {</span>
+<span class="fc" id="L72">      throw new IllegalArgumentException(e);</span>
+<span class="fc" id="L73">    }</span>
     // close all buffers
-<span class="nc bnc" id="L75" title="All 2 branches missed.">    if (expectedReader != null) {</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">    if (expectedReader != null) {</span>
       try {
-<span class="nc" id="L77">        expectedReader.close();</span>
+<span class="fc" id="L77">        expectedReader.close();</span>
 <span class="nc" id="L78">      } catch (IOException e) {</span>
 <span class="nc" id="L79">        throw new RuntimeException(e);</span>
-<span class="nc" id="L80">      }</span>
+<span class="fc" id="L80">      }</span>
     }
-<span class="nc bnc" id="L82" title="All 2 branches missed.">    if (comparedReader != null) {</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">    if (comparedReader != null) {</span>
       try {
-<span class="nc" id="L84">        comparedReader.close();</span>
+<span class="fc" id="L84">        comparedReader.close();</span>
 <span class="nc" id="L85">      } catch (IOException e) {</span>
 <span class="nc" id="L86">        throw new RuntimeException(e);</span>
-<span class="nc" id="L87">      }</span>
+<span class="fc" id="L87">      }</span>
     }
 
-<span class="nc" id="L90">    return status;</span>
+<span class="fc" id="L90">    return status;</span>
   }
 
   private BufferedReader getReader(File fileToRead) throws FileNotFoundException {
     BufferedReader expectedReader;
-<span class="nc" id="L95">    InputStream ins = new FileInputStream(fileToRead);</span>
-<span class="nc" id="L96">    InputStreamReader isr = new InputStreamReader(ins, Charset.forName(&quot;UTF-8&quot;));</span>
-<span class="nc" id="L97">    expectedReader = new BufferedReader(isr);</span>
-<span class="nc" id="L98">    return expectedReader;</span>
+<span class="fc" id="L95">    InputStream ins = new FileInputStream(fileToRead);</span>
+<span class="fc" id="L96">    InputStreamReader isr = new InputStreamReader(ins, Charset.forName(&quot;UTF-8&quot;));</span>
+<span class="fc" id="L97">    expectedReader = new BufferedReader(isr);</span>
+<span class="fc" id="L98">    return expectedReader;</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
