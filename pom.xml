@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.github.baniuk</groupId>
 	<artifactId>ImageJTestSuite</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	
 	<name>ImageJTestSuite</name>
@@ -21,14 +20,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<name>MIT</name>
 			<url>https://github.com/baniuk/testimages/blob/master/LICENSE</url>
 			<distribution>repo</distribution>
-			<comments></comments>
+			<comments />
 		</license>
 	</licenses>
 	<scm>
 		<url>https://github.com/baniuk/ImageJTestSuite</url>
 		<connection>scm:git:https://github.com/baniuk/ImageJTestSuite.git</connection>
 		<developerConnection>scm:git:https://github.com/baniuk/ImageJTestSuite.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>ImageJTestSuite-1.0.0</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
