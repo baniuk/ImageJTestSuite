@@ -2,3 +2,4 @@ com.github.baniuk.ImageJTestSuite
 com.github.baniuk.ImageJTestSuite.matchers.file
 com.github.baniuk.ImageJTestSuite.matchers.imageprocessor
 com.github.baniuk.ImageJTestSuite.matchers.json
+com.github.baniuk.ImageJTestSuite.tools.files

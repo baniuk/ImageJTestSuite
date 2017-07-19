@@ -25,9 +25,9 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 21,
+      <title>File: 23,
              Errors: 0,
-             Warnings: 23,
+             Warnings: 25,
              Infos: 0
       </title>
             <link>https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html</link>
@@ -158,7 +158,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.json.JsonMatchers.java">com/github/baniuk/ImageJTestSuite/matchers/json/JsonMatchers.java</a>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.tools.files.package-info.java">com/github/baniuk/ImageJTestSuite/tools/files/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -172,7 +172,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.file.package-info.java">com/github/baniuk/ImageJTestSuite/matchers/file/package-info.java</a>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.json.JsonMatchers.java">com/github/baniuk/ImageJTestSuite/matchers/json/JsonMatchers.java</a>
                 </td>
                 <td>
                   0
@@ -200,7 +200,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.file.package-info.java">com/github/baniuk/ImageJTestSuite/matchers/file/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.matchers.json.JsonKeysMatcher.java">com/github/baniuk/ImageJTestSuite/matchers/json/JsonKeysMatcher.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://www.github.com/baniuk/ImageJTestSuite/checkstyle.html#com.github.baniuk.ImageJTestSuite.tools.files.FileModifiers.java">com/github/baniuk/ImageJTestSuite/tools/files/FileModifiers.java</a>
                 </td>
                 <td>
                   0
