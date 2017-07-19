@@ -12,14 +12,13 @@ Maven generated site is available under [GitHub pages](https://baniuk.github.io/
 mvn release:clean release:prepare -DpushChanges=false
 # push to repo
 git push --tags
-# perform release
+# perform release and deploy to ossrh
 mvn release:perform
-# deploy release
-cd target/checkout
-mvn nexus-staging:release
 # update changelog
 github_changelog_generator
+git commit -am "Updated Changelog" -S
 # push site to GH
+cd target/checkout
 mvn site-deploy
 ```
 
