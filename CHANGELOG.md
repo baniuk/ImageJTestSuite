@@ -1,8 +1,11 @@
 # Change Log
 
-## [Unreleased](https://github.com/baniuk/ImageJTestSuite/tree/HEAD)
+## [ImageJTestSuite-1.0.1](https://github.com/baniuk/ImageJTestSuite/tree/ImageJTestSuite-1.0.1) (2017-07-18)
+[Full Changelog](https://github.com/baniuk/ImageJTestSuite/compare/ImageJTestSuite-1.0.0...ImageJTestSuite-1.0.1)
 
-[Full Changelog](https://github.com/baniuk/ImageJTestSuite/compare/ImageJTestSuite-1.0.0...HEAD)
+**Implemented enhancements:**
+
+- Extend file matcher by simple line replacement tools [\#6](https://github.com/baniuk/ImageJTestSuite/issues/6)
 
 **Merged pull requests:**
 
