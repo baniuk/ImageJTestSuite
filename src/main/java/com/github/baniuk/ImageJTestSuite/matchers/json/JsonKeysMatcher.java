@@ -39,7 +39,12 @@ public class JsonKeysMatcher extends TypeSafeDiagnosingMatcher<String> {
    */
   @Override
   public void describeTo(Description description) {
-    description.appendText("Same keys in JSons.");
+    description.appendText("Same keys as: ");
+    try {
+      description.appendValue(getKeysFromJson(expected).toArray());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   /*
