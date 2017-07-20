@@ -39,8 +39,13 @@ public class JsonKeysMatcher extends TypeSafeDiagnosingMatcher&lt;String&gt; {
    */
   @Override
   public void describeTo(Description description) {
-<span class="nc" id="L42">    description.appendText(&quot;Same keys in JSons.&quot;);</span>
-<span class="nc" id="L43">  }</span>
+<span class="nc" id="L42">    description.appendText(&quot;Same keys as: &quot;);</span>
+    try {
+<span class="nc" id="L44">      description.appendValue(getKeysFromJson(expected).toArray());</span>
+<span class="nc" id="L45">    } catch (Exception e) {</span>
+<span class="nc" id="L46">      e.printStackTrace();</span>
+<span class="nc" id="L47">    }</span>
+<span class="nc" id="L48">  }</span>
 
   /*
    * (non-Javadoc)
@@ -54,19 +59,19 @@ public class JsonKeysMatcher extends TypeSafeDiagnosingMatcher&lt;String&gt; {
     List&lt;String&gt; keysRef;
 
     try {
-<span class="fc" id="L57">      keysTest = getKeysFromJson(expected);</span>
-<span class="fc" id="L58">      keysRef = getKeysFromJson(compared);</span>
-<span class="nc" id="L59">    } catch (Exception e) {</span>
-<span class="nc" id="L60">      mismatchDescription.appendText(&quot;can not validate json: &quot; + e.getMessage());</span>
-<span class="nc" id="L61">      return false;</span>
-<span class="fc" id="L62">    }</span>
+<span class="fc" id="L62">      keysTest = getKeysFromJson(expected);</span>
+<span class="fc" id="L63">      keysRef = getKeysFromJson(compared);</span>
+<span class="nc" id="L64">    } catch (Exception e) {</span>
+<span class="nc" id="L65">      mismatchDescription.appendText(&quot;can not validate json: &quot; + e.getMessage());</span>
+<span class="nc" id="L66">      return false;</span>
+<span class="fc" id="L67">    }</span>
 
-<span class="fc" id="L64">    Matcher&lt;?&gt; equalsMatcher = IsIterableContainingInAnyOrder.containsInAnyOrder(keysRef.toArray());</span>
-<span class="fc bfc" id="L65" title="All 2 branches covered.">    if (!equalsMatcher.matches(keysTest)) {</span>
-<span class="fc" id="L66">      mismatchDescription.appendText(&quot;was: &quot;).appendDescriptionOf(equalsMatcher);</span>
-<span class="fc" id="L67">      return false;</span>
+<span class="fc" id="L69">    Matcher&lt;?&gt; equalsMatcher = IsIterableContainingInAnyOrder.containsInAnyOrder(keysRef.toArray());</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">    if (!equalsMatcher.matches(keysTest)) {</span>
+<span class="fc" id="L71">      mismatchDescription.appendText(&quot;was: &quot;).appendDescriptionOf(equalsMatcher);</span>
+<span class="fc" id="L72">      return false;</span>
     } else {
-<span class="fc" id="L69">      return true;</span>
+<span class="fc" id="L74">      return true;</span>
     }
   }
 
@@ -78,10 +83,10 @@ public class JsonKeysMatcher extends TypeSafeDiagnosingMatcher&lt;String&gt; {
    * @throws Exception Exception
    */
   public static List&lt;String&gt; getKeysFromJson(String jsoString) throws Exception {
-<span class="fc" id="L81">    Object things = new Gson().fromJson(jsoString, Object.class);</span>
-<span class="fc" id="L82">    List&lt;String&gt; keys = new ArrayList&lt;String&gt;();</span>
-<span class="fc" id="L83">    collectAllTheKeys(keys, things);</span>
-<span class="fc" id="L84">    return keys;</span>
+<span class="fc" id="L86">    Object things = new Gson().fromJson(jsoString, Object.class);</span>
+<span class="fc" id="L87">    List&lt;String&gt; keys = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L88">    collectAllTheKeys(keys, things);</span>
+<span class="fc" id="L89">    return keys;</span>
   }
 
   /**
@@ -92,21 +97,21 @@ public class JsonKeysMatcher extends TypeSafeDiagnosingMatcher&lt;String&gt; {
    */
   @SuppressWarnings({ &quot;rawtypes&quot;, &quot;unchecked&quot; })
   public static void collectAllTheKeys(List keys, Object o) {
-<span class="fc" id="L95">    Collection values = null;</span>
-<span class="fc bfc" id="L96" title="All 2 branches covered.">    if (o instanceof Map) {</span>
-<span class="fc" id="L97">      Map map = (Map) o;</span>
-<span class="fc" id="L98">      keys.addAll(map.keySet()); // collect keys at current level in hierarchy</span>
-<span class="fc" id="L99">      values = map.values();</span>
-<span class="fc bfc" id="L100" title="All 2 branches covered.">    } else if (o instanceof Collection) {</span>
-<span class="fc" id="L101">      values = (Collection) o;</span>
+<span class="fc" id="L100">    Collection values = null;</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">    if (o instanceof Map) {</span>
+<span class="fc" id="L102">      Map map = (Map) o;</span>
+<span class="fc" id="L103">      keys.addAll(map.keySet()); // collect keys at current level in hierarchy</span>
+<span class="fc" id="L104">      values = map.values();</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">    } else if (o instanceof Collection) {</span>
+<span class="fc" id="L106">      values = (Collection) o;</span>
     } else {
-<span class="fc" id="L103">      return;</span>
+<span class="fc" id="L108">      return;</span>
     }
 
-<span class="fc bfc" id="L106" title="All 2 branches covered.">    for (Object value : values) {</span>
-<span class="fc" id="L107">      collectAllTheKeys(keys, value);</span>
-<span class="fc" id="L108">    }</span>
-<span class="fc" id="L109">  }</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">    for (Object value : values) {</span>
+<span class="fc" id="L112">      collectAllTheKeys(keys, value);</span>
+<span class="fc" id="L113">    }</span>
+<span class="fc" id="L114">  }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
