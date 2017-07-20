@@ -3,7 +3,7 @@
 	
 	<groupId>com.github.baniuk</groupId>
 	<artifactId>ImageJTestSuite</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	
 	<name>ImageJTestSuite</name>
@@ -27,7 +27,7 @@
 		<url>https://github.com/baniuk/ImageJTestSuite</url>
 		<connection>scm:git:https://github.com/baniuk/ImageJTestSuite.git</connection>
 		<developerConnection>scm:git:https://github.com/baniuk/ImageJTestSuite.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>ImageJTestSuite-1.0.2</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
