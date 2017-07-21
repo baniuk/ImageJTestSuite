@@ -1,5 +1,16 @@
 # Change Log
 
+## [ImageJTestSuite-1.0.2](https://github.com/baniuk/ImageJTestSuite/tree/ImageJTestSuite-1.0.2) (2017-07-20)
+[Full Changelog](https://github.com/baniuk/ImageJTestSuite/compare/ImageJTestSuite-1.0.1...ImageJTestSuite-1.0.2)
+
+**Closed issues:**
+
+- Add better diagnostic message [\#8](https://github.com/baniuk/ImageJTestSuite/issues/8)
+
+**Merged pull requests:**
+
+- Update README.md [\#7](https://github.com/baniuk/ImageJTestSuite/pull/7) ([CellDynamics](https://github.com/CellDynamics))
+
 ## [ImageJTestSuite-1.0.1](https://github.com/baniuk/ImageJTestSuite/tree/ImageJTestSuite-1.0.1) (2017-07-18)
 [Full Changelog](https://github.com/baniuk/ImageJTestSuite/compare/ImageJTestSuite-1.0.0...ImageJTestSuite-1.0.1)
 
